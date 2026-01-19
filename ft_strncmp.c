@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 17:04:31 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/16 17:06:16 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:35:09 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1,const char*s2, size_t n)
 {

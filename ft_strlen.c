@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amendibi <amendibi@student.42urduliz.      +#+  +:+       +#+        */
+/*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 20:01:39 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/12 20:05:42 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:35:06 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

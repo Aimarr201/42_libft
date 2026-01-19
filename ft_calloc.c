@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/17 19:16:03 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 17:34:41 by amendibi         ###   ########.fr       */
+/*   Created: 2026/01/19 17:05:32 by amendibi          #+#    #+#             */
+/*   Updated: 2026/01/19 17:35:45 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    unsigned char    *tmp_dst;
-    unsigned char    *tmp_src;
+	unsigned char	*tmp;
+	size_t			i;
 
-    tmp_dst = (unsigned char *) dst;
-    tmp_src = (unsigned char *) src;
-    if (!dst || !src)
-        return (NULL);
-	if (size == 0)
-		return (dst);
-    while (size > 0)
-    {
-        *(tmp_dst++) = *(tmp_src++);
-        size--;
-    }
-    return (dst);
+	i = 0;
+	if (!count || !size)
+		return (NULL);
+	tmp = malloc(count * size);
+	if (!tmp)
+		return (NULL);
+	ft_bzero(tmp, count * size);
+	return (tmp);
 }

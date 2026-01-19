@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 17:04:35 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/16 17:04:38 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:35:20 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

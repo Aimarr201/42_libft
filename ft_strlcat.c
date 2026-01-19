@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 17:08:42 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/17 13:58:37 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:35:01 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(const char *dst, const char *src, size_t dstsize)
 {

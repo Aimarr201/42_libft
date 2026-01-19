@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 11:51:04 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/17 12:59:06 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:35:04 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstlen)
 {

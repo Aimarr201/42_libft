@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amendibi <amendibi@student.42urduliz.      +#+  +:+       +#+        */
+/*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 19:55:37 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/12 20:01:10 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:34:34 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

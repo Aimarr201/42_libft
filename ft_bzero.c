@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 19:10:34 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/17 19:10:34 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:34:15 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *str, size_t size)
 {

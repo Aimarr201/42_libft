@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 19:27:23 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/17 19:27:23 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:34:43 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t size)
 {

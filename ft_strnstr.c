@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amendibi <amendibi@student.42urduliz.      +#+  +:+       +#+        */
+/*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:32:28 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/15 18:32:34 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/19 17:35:12 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
