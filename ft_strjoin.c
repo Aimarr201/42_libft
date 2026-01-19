@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 17:04:31 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 17:35:09 by amendibi         ###   ########.fr       */
+/*   Created: 2026/01/19 22:29:41 by amendibi          #+#    #+#             */
+/*   Updated: 2026/01/19 22:29:41 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char*s2, size_t n)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	i;
+	char	*concatenated;
+	int		i;
+	int		j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
-	while ((s1[i] || s2[i]) && (i < n))
+	j = 0;
+	concatenated = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!concatenated)
+		return (NULL);
+	while (s1[i])
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		concatenated[i] = s1[i];
 		i++;
 	}
-	return (0);
+	while (s2[j])
+	{
+		concatenated[i] = s2[j];
+		j++;
+		i++;
+	}
+	concatenated[i] = '\0';
+	return (concatenated);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	char	s1[] = "hola";
-	char    s2[] = "ho\0a";
-	int	resta;
-
-	resta = ft_strncmp(s1, s2, 4);
-	printf("%d", resta);
-}*/
