@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 14:10:26 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 17:34:56 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/20 19:57:06 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ char	*ft_strchr(const char *s, int c)
 	if (tofind == '\0')
 		return ((char *) s);
 	return (NULL);
-};
+}

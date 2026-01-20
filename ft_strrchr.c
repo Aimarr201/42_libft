@@ -6,13 +6,13 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 15:27:42 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 17:35:14 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/20 19:54:35 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	tofind;
 	char	*p;

@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 22:29:41 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 22:29:41 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/20 19:55:01 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (NULL);
 	i = 0;
 	j = 0;
-	concatenated = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	concatenated = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1)
+			* sizeof(char));
 	if (!concatenated)
 		return (NULL);
 	while (s1[i])

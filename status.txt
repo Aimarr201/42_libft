@@ -1,5 +1,3 @@
-ft_substr
-ft_strtrim
 ft_split
 
 listas:
