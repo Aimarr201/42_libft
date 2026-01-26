@@ -6,13 +6,13 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 20:28:34 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/21 16:36:21 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/26 17:00:53 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
-int		search_char(char c, char const *tofind)
+int	search_char(char c, char const *tofind)
 {
 	int	i;
 

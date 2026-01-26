@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 17:37:54 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/26 15:32:58 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/26 17:23:39 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stddef.h>
+# include <stddef.h>//nosequehace
 # include <stdlib.h>
 # include <fcntl.h>
-# include <std>
+# include <stdarg.h>
+# include <stdio.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 #endif
