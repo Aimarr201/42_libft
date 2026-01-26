@@ -6,7 +6,7 @@
 #    By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/19 17:44:15 by amendibi          #+#    #+#              #
-#    Updated: 2026/01/19 18:50:46 by amendibi         ###   ########.fr        #
+#    Updated: 2026/01/26 15:33:00 by amendibi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CC = cc
 
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address -g3 -I.
+CFLAGS = -Wall -Werror -Wextra -I.
 
 SRCS = ft_atoi.c
 

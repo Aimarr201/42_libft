@@ -6,9 +6,11 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:32:46 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/21 20:52:09 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/22 17:22:32 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_count_words(const char *s, char c)
 {
