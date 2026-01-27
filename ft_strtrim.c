@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 20:28:34 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/26 17:00:53 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:52:07 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strtrim(const char *str, const char *tofind)
 
 	i = 0;
 	j = 0;
-	if (!str)
+	if (!str || !tofind)
 		return (NULL);
 	len = ft_strlen(str);
 	while (search_char(str[i], tofind) && str[i])

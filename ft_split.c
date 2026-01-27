@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:32:46 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/26 17:01:40 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/27 19:45:59 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ static int	ft_count_words(const char *s, char c)
 	words = 0;
 	while (s[i])
 	{
-		if (s[i] != c && s[i + 1] != '\0')
+		if (s[i] == c && (s[i + 1] != '\0' || s[i + 1] != c))
 			words++;
 		i++;
 	}
+	return (words);
 }
 
 static int	ft_word_len(const char *s, char c)
@@ -32,7 +33,7 @@ static int	ft_word_len(const char *s, char c)
 	size_t	i;
 
 	i = 0;
-	while (s[i] && (s[i + 1] != c || s[i + 1] != '\0'))
+	while (s[i] && s[i] != c)
 		i++;
 	return (i);
 }
@@ -61,13 +62,15 @@ char	**ft_split(const char *s, char c)
 		return (NULL);
 	words = ft_count_words(s, c);
 	list = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!list)
+		return (NULL);
 	i = 0;
 	while (i < words)
 	{
 		while (*s == c)
 			s++;
 		len = ft_word_len(s, c);
-		list[i] = ft_strndup(s, len);
+		list[i] = ft_substr(s, 0, len);
 		if (!list[i])
 			return (ft_free_all(list, i), NULL);
 		s = s + len;

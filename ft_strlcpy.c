@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 11:51:04 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 17:35:04 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/27 17:57:25 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstlen)
 
 	i = 0;
 	srclen = ft_strlen(src);
+	if (dstlen == 0)
+		return (srclen);
 	while (src[i] != '\0' && i < (dstlen - 1))
 	{
 		dst[i] = src[i];

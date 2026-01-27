@@ -6,13 +6,13 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 18:52:37 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 19:15:11 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/26 21:07:39 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*dupe;
 	size_t	i;

@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 18:32:28 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/19 17:35:12 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/27 20:37:52 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] && little[j])
+		while (big[i + j] == little[j] && little[j] && (i + j) < len)
 		{
 			j++;
-			if (little[j] == '\0')
-				return ((char *) little);
 		}
+		if (little[j] == '\0')
+			return ((char *) big + i);
 		i++;
 	}
 	return (NULL);

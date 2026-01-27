@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 19:16:03 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/20 19:57:56 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:35:35 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t size)
 
 	tmp_dst = (unsigned char *) dst;
 	tmp_src = (unsigned char *) src;
-	if (!dst || !src)
-		return (NULL);
+	if (!dst && !src)
+		return (dst);
 	if (size == 0)
 		return (dst);
 	while (size > 0)
