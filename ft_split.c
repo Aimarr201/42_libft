@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:32:46 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/27 19:45:59 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/28 18:52:44 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ char	**ft_split(const char *s, char c)
 		s = s + len;
 		i++;
 	}
-	list[i] = NULL;
+	list[i] = '\0';
 	return (list);
 }

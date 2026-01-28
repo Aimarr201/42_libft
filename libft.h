@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 17:37:54 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/26 20:20:21 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:17:31 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 # include <stdarg.h>
 # include <stdio.h>
 
-// Character check functions
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -29,7 +28,6 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-// String functions
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
@@ -45,7 +43,6 @@ char	**ft_split(const char *s, char c);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-// Memory functions
 void	*ft_memset(void *ptr, int value, size_t size);
 void	ft_bzero(void *str, size_t size);
 void	*ft_memcpy(void *dst, const void *src, size_t size);
@@ -54,17 +51,14 @@ void	*ft_memchr(const void *s, int c, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t size);
 void	*ft_calloc(size_t count, size_t size);
 
-// Conversion functions
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
 
-// Output functions
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-// Linked list functions
 typedef struct s_list
 {
 	void			*content;
@@ -73,5 +67,6 @@ typedef struct s_list
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
 
 #endif
