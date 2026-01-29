@@ -6,7 +6,7 @@
 #    By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/19 17:44:15 by amendibi          #+#    #+#              #
-#    Updated: 2026/01/28 19:16:00 by amendibi         ###   ########.fr        #
+#    Updated: 2026/01/29 19:08:40 by amendibi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,11 @@ SRCS = ft_isdigit.c\
 		ft_split.c\
 		ft_lstnew.c\
 		ft_lstadd_front.c\
-		ft_lstsize.c
-
+		ft_lstsize.c\
+		ft_lstlast.c\
+		ft_lstadd_back.c\
+		ft_lstdelone.c\
+		ft_lstclear.c
 
 OBJS = $(SRCS:.c=.o)
 

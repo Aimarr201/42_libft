@@ -6,7 +6,7 @@
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 19:32:46 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/28 18:52:44 by amendibi         ###   ########.fr       */
+/*   Updated: 2026/01/29 16:49:20 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_count_words(const char *s, char c)
 	words = 0;
 	while (s[i])
 	{
-		if (s[i] == c && (s[i + 1] != '\0' || s[i + 1] != c))
+		if (s[i] != c && (s[i + 1] == '\0' || s[i + 1] == c))
 			words++;
 		i++;
 	}
@@ -38,12 +38,12 @@ static int	ft_word_len(const char *s, char c)
 	return (i);
 }
 
-static void	ft_free_all(char **s, size_t i)
+static void	ft_free_all(char **s)
 {
 	size_t	count;
 
 	count = 0;
-	while (count < i)
+	while (s[count] != NULL)
 	{
 		free(s[count]);
 		count++;
@@ -53,29 +53,29 @@ static void	ft_free_all(char **s, size_t i)
 
 char	**ft_split(const char *s, char c)
 {
-	size_t	words;
+	size_t	j;
 	size_t	i;
 	char	**list;
-	int		len;
 
 	if (!s)
 		return (NULL);
-	words = ft_count_words(s, c);
-	list = (char **)malloc(sizeof(char *) * (words + 1));
+	list = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!list)
 		return (NULL);
 	i = 0;
-	while (i < words)
+	j = 0;
+	while (s[i])
 	{
-		while (*s == c)
-			s++;
-		len = ft_word_len(s, c);
-		list[i] = ft_substr(s, 0, len);
-		if (!list[i])
-			return (ft_free_all(list, i), NULL);
-		s = s + len;
-		i++;
+		while (s[i] && s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		list[j] = malloc((ft_word_len(&s[i], c) + 1) * sizeof(char));
+		if (!list[j])
+			return (ft_free_all(list), NULL);
+		ft_strlcpy(list[j++], &s[i], ft_word_len(&s[i], c) + 1);
+		i = i + ft_word_len(&s[i], c);
 	}
-	list[i] = '\0';
+	list[j] = NULL;
 	return (list);
 }
