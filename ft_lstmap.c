@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/29 19:07:54 by amendibi          #+#    #+#             */
-/*   Updated: 2026/01/29 19:44:33 by amendibi         ###   ########.fr       */
+/*   Created: 2026/01/29 19:55:11 by amendibi          #+#    #+#             */
+/*   Updated: 2026/01/29 20:24:42 by amendibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*tmp;
+	t_list	*new_list;
+	t_list	*new_obj;
 
-	if (!*lst)
-		return ;
-	while (*lst)
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = NULL;
+	while (lst)
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = tmp;
+		new_obj = ft_lstnew(f(lst->content));
+		if (!new_obj)
+		{
+			ft_lstclear(&new_list, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_list, new_obj);
+		lst = lst->next;
 	}
-	*lst = NULL;
+	return (new_list);
 }

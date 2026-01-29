@@ -6,7 +6,7 @@
 #    By: amendibi <amendibi@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/19 17:44:15 by amendibi          #+#    #+#              #
-#    Updated: 2026/01/29 19:08:40 by amendibi         ###   ########.fr        #
+#    Updated: 2026/01/29 19:56:17 by amendibi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,9 @@ SRCS = ft_isdigit.c\
 		ft_lstlast.c\
 		ft_lstadd_back.c\
 		ft_lstdelone.c\
-		ft_lstclear.c
+		ft_lstclear.c\
+		ft_lstiter.c\
+		ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -65,7 +67,7 @@ HEADERS = libft.h
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		ar rcs $(NAME) $(OBJS)
+		ar rcs $(NAME) $(OBJS) $(HEADERS)
 
 %.o: %.c $(HEADERS)
 		$(CC) $(CFLAGS) -c $< -o $@
